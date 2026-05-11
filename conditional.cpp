@@ -18,10 +18,17 @@ void isEven(int num)
     else
         cout << "Odd";
 }
+void lower_upper(char ch)
+{
+    if (ch >= 65 && ch <= 91)
+        cout << "Uppercase";
+    else
+        cout << "Lowercase";
+}
 int main()
 {
     int choice;
-    cout << "1 : Voting\n2 : Odd or Even\n";
+    cout << "1 : Voting\n2 : Odd or Even\n3 : Uppercase or Lowercase\n";
     cin >> choice;
     if (choice == 1)
     {
@@ -36,6 +43,13 @@ int main()
         cout << "Enter a number: ";
         cin >> num;
         isEven(num);
+    }
+    else if (choice == 3)
+    {
+        char ch;
+        cout << "Enter a char: ";
+        cin >> ch;
+        lower_upper(ch);
     }
     else
         cout << "Only write either 1 or 2.";
